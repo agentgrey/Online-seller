@@ -1,7 +1,6 @@
 .navbar {
   display: flex;
   height: 40px;
-  font-family: Nova, monospace;
   justify-content: space-between;
   align-items: center;
   background-color: #E1F2FF;
@@ -23,9 +22,6 @@
   transition: color 0.3s ease;
 }
 
-.menu a:hover {
-  color: #1433FF;
-}
-.active {
+.menu a:hover, .menu a:focus {
   color: #1433FF;
 }

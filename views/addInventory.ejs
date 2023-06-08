@@ -1,0 +1,28 @@
+
+
+
+<div class="section add-inventory">
+    <h3>Add Inventory</h3>
+    <!-- Inventory Form -->
+    <form action="/products/add" method="POST" class="inventory-form">
+    <label>Category:</label>
+    <select name="category">
+        <option value="" disabled selected>Select Category</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Sports">Sports</option>
+        <option value="Lifestyle">Lifestyle</option>
+        <option value="Others">Others</option>
+    </select>
+    <label>Product Name:</label>
+    <input type="text" name="productName" placeholder="Enter product name" required>
+    <label>MRP:</label>
+    <input type="number" name="MRP" placeholder="Enter MRP" required>
+    <label>SP:</label>
+    <input type="number" name="SP" placeholder="Enter SP" required>
+    <label>Quantity:</label>
+    <input type="number" name="quantity" placeholder="Enter quantity" required>
+    <label>Images:</label>
+    <input type="url" name="image" placeholder="Image URL">
+    <button type="submit">Save</button>
+    </form>
+</div>

@@ -3,18 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 /** ------------------ IMPORTING CONTROLLERS ------------------ **/
-const homeController = require('../controllers/homeController');
+const productController = require('../controllers/productController');
 
-
-
-console.log('Router is loaded');
 
 /** ------------------ MAKING ROUTES ------------------ **/
-router.get('/' , homeController.home );
-router.get('/signIn', homeController.signIn);
-router.get('/signUp', homeController.signUp);
-router.use('/users' , require('./user'));
-router.use('/products', require('./product'));
+router.post('/add', productController.addProduct);
 
 /** ------------------ EXPORTING ROUTER ------------------ **/
 module.exports = router;

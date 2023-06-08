@@ -1,14 +1,20 @@
 /** ------------------ IMPORTING PACKAGE ------------------ **/
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
 /** ------------------ IMPORTING CONTROLLERS ------------------ **/
 const userController = require('../controllers/userController');
 
 
 
 /** ------------------ MAKING ROUTES ------------------ **/
-router.get('/signIn', userController.signIn);
-router.get('/signUp', userController.signUp);
+router.post('/create', userController.create);
+router.post('/createSession',passport.authenticate(
+    'local', {failureRedirect: '/users/singIn'},)
+, userController.createSession);
+router.get('/destroySession', userController.destroySession);
+
+router.post('/addStoreInfo' , userController.addStoreInfo);
 
 /** ------------------ EXPORTING ROUTER ------------------ **/
 module.exports = router;

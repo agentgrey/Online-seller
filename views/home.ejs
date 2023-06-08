@@ -1,6 +1,45 @@
 <!-- local css for body -->
 <link rel="stylesheet" type="text/css" href="../css/home.css">
 
-<div>
-    <h2>Welcome!</h2>
+<!-- Dashboard Layout -->
+<div class="dashboard">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Seller Profile -->
+    <div class="profile">
+      <!-- Seller Name -->
+      <h2><%= user.name %></h2>
+    </div>
+    <!-- Navigation Links -->
+    <ul class="navigation">
+      <li class="active" style="display: none;" data-section="heading"></li>
+      <li data-section="add-store-info">Add Store Info</li>
+      <li data-section="add-inventory">Add Inventory</li>
+      <li data-section="show-inventory">Show Inventory</li>
+    </ul>
+    <!-- Logout Button -->
+    <a href="/users/destroySession"><button class="logout">Logout</button></a>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content">
+     <!--Welcome  -->
+      <div class="active section" id="heading">
+        <h1>Welcome to Your Dashboard!</h1>
+        <p>Manage your store information, inventory, and more.</p>
+      </div>
+
+    <!-- Add Store Info Section -->
+    <%- include('storeInfo') %>
+
+    <!-- Add Inventory Section -->
+    <%- include('addInventory') %>
+
+    <!-- Show Inventory Section -->
+    <%- include('showInventory') %>
+
+  </div>
 </div>
+
+<!-- JavaScript for dashboard -->
+<script src="../js/home.js"></script>

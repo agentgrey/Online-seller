@@ -1,0 +1,23 @@
+<div class="section add-store-info">
+      <h3>Add Store Details</h3>
+    <!-- Store Info Form -->
+    <form action="/users/addStoreInfo" method="POST" class="store-info">
+    <label>Address:</label>
+    <input type="text" name="address" placeholder="Enter address" required>
+    <label>GST:</label>
+    <input type="text" name="gst" placeholder="Enter GST" required>
+    <label>Phone Number:</label>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <label>Website:</label>
+    <input type="url" name="website" placeholder="Website URL">
+    <label>Category:</label>
+    <select name="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Sports">Sports</option>
+        <option value="Lifestyle">Lifestyle</option>
+        <option value="Others">Others</option>
+    </select><br>
+    <button type="submit">Save</button>
+    </form>
+</div>
