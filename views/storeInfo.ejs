@@ -1,4 +1,16 @@
 <div class="section add-store-info">
+<% if(info.length!=0) { %>
+    <h3>Store Details</h3>
+    <div class="store-details">
+      <p>Address: <%= info[0].address %></p>
+      <p>GST: <%= info[0].gst %></p>
+      <p>Phone Number: <%= info[0].phone %></p>
+      <% if (info[0].website) { %>
+        <p>Website: <%= info[0].website %></p>
+      <% } %>
+      <p>Category: <%= info[0].category %></p>
+    </div>
+<% } else { %>
       <h3>Add Store Details</h3>
     <!-- Store Info Form -->
     <form action="/users/addStoreInfo" method="POST" class="store-info">
@@ -20,4 +32,5 @@
     </select><br>
     <button type="submit">Save</button>
     </form>
+<% } %>
 </div>
