@@ -1,0 +1,19 @@
+<!-- local css for signIn -->
+<link rel="stylesheet" type="text/css" href="../css/signIn.css">
+
+
+<div class="input-form">
+    <div>
+        <h1>Sign Up</h1>
+    </div>
+    <div class="formClass">
+        <form action="/users/create" method="POST">
+            <input type="Name" name="name" placeholder="Enter name" required><br>
+            <input type="email" name="email" placeholder="Enter email" required><br>
+            <input type="password" name="password" placeholder="Enter password" required><br>
+            <input type="password" name="confirmPassword" placeholder="Confirm password" required><br>
+            <button type="submit">Sign Up</button> <br />
+            <a href="/users/signIn" >Already have an Account</a>
+        </form> 
+    </div>
+</div>

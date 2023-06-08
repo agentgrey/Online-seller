@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  height: 40px;
+  font-family: Nova, monospace;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E1F2FF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6091D6;
+}
+
+.menu a {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #4E8FFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #1433FF;
+}
+.active {
+  color: #1433FF;
+}
