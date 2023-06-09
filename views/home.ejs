@@ -12,10 +12,9 @@
     </div>
     <!-- Navigation Links -->
     <ul class="navigation">
-      <li class="active" style="display: none;" data-section="heading"></li>
-      <li data-section="add-store-info">Add Store Info</li>
-      <li data-section="add-inventory">Add Inventory</li>
-      <li data-section="show-inventory">Show Inventory</li>
+      <a href="/users/storeInfo"><li>Add Store Info</li></a>
+      <a href="/users/products"><li>Add Inventory</li></a>
+      <a href="/users/products/<%=user._id%>/inventory" ><li>Show Inventory</li></a>
     </ul>
     <!-- Logout Button -->
     <a href="/users/destroySession"><button class="logout">Logout</button></a>
@@ -24,22 +23,10 @@
   <!-- Main Content Area -->
   <div class="content">
      <!--Welcome  -->
-      <div class="active section" id="heading">
+      <div id="heading">
         <h1>Welcome to Your Store's Control Center</h1>
         <p>Manage your store information, inventory, and more with ease!</p>
       </div>
-
-    <!-- Add Store Info Section -->
-    <%- include('storeInfo') %>
-
-    <!-- Add Inventory Section -->
-    <%- include('addInventory') %>
-
-    <!-- Show Inventory Section -->
-    <%- include('showInventory') %>
-
   </div>
 </div>
 
-<!-- JavaScript for dashboard -->
-<script src="../js/home.js"></script>

@@ -1,0 +1,46 @@
+.add-store-info {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  text-align: left;
+}
+
+.add-store-info h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.store-info label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.store-info input,
+.store-info select {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.store-info select {
+  height: 40px;
+}
+
+.store-info button[type="submit"] {
+  width: 10%;
+  background-color: #7DB5FF;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.store-info button:hover {
+  background-color: #4A8FD1;
+}

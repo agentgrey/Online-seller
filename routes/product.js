@@ -7,7 +7,9 @@ const productController = require('../controllers/productController');
 
 
 /** ------------------ MAKING ROUTES ------------------ **/
+router.get('/', productController.addProductPage);
 router.post('/add', productController.addProduct);
+router.get('/:id/inventory', productController.showInventory);
 
 /** ------------------ EXPORTING ROUTER ------------------ **/
 module.exports = router;

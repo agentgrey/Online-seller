@@ -1,10 +1,13 @@
+<!-- local css for body -->
+<link rel="stylesheet" type="text/css" href="../css/addInventory.css">
 
-
-
-<div class="section add-inventory">
+<div class="add-inventory">
+    <div style="display: flex; justify-content: space-between;">
     <h3>Add Inventory</h3>
+    <a href="/" >Home</a>
+    </div>
     <!-- Inventory Form -->
-    <form action="/products/add" method="POST" class="inventory-form">
+    <form action="/users/products/add" method="POST" class="inventory-form">
     <label>Category:</label>
     <select name="category">
         <option value="" disabled selected>Select Category</option>
@@ -22,7 +25,8 @@
     <label>Quantity:</label>
     <input type="number" name="quantity" placeholder="Enter quantity" required>
     <label>Images:</label>
-    <input type="url" name="image" placeholder="Image URL">
-    <button type="submit">Save</button>
+    <input type="url" name="image" placeholder="Image URL"> <br>
+    <button type="submit">Add Product</button>
+    <button type="reset" style="background-color: red;">Reset</button>
     </form>
 </div>

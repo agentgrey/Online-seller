@@ -15,6 +15,9 @@ router.post('/createSession',passport.authenticate(
 router.get('/destroySession', userController.destroySession);
 
 router.post('/addStoreInfo' , userController.addStoreInfo);
+router.get('/storeInfo', userController.storeInfo);
+
+router.use('/products', require('./product'));
 
 /** ------------------ EXPORTING ROUTER ------------------ **/
 module.exports = router;

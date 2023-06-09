@@ -9,7 +9,7 @@ module.exports.home = async function(req, res){
         if(req.user) {
             const storeInfo = await Store.find({userRef: req.user._id});
             const products = await Product.find({userRef: req.user._id});
-            console.log(storeInfo);
+            
             return res.render('home', {
                 title : 'Online Seller',
                 products: products,

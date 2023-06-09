@@ -2,6 +2,13 @@
 const Product = require('../models/product');
 
 
+
+/** ------------------ EXPORTING FUNCTION To add a product ------------------ **/
+module.exports.addProductPage = async function(req, res) {
+    return res.render('addInventory', {
+      title: 'Add Inventory'
+    })
+}
 /** ------------------ EXPORTING FUNCTION To add a product ------------------ **/
 module.exports.addProduct = async function(req, res) {
   try {
@@ -28,3 +35,11 @@ module.exports.addProduct = async function(req, res) {
     return res.redirect('back');
   }
 };
+/** ------------------ EXPORTING FUNCTION To show inventory ------------------ **/
+module.exports.showInventory = async function(req, res) {
+    const products = await Product.find({userRef: req.params.id});
+    return res.render('showInventory', {
+      title: 'Inventory',
+      products: products
+    })
+}

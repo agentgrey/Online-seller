@@ -1,6 +1,7 @@
 /** ------------------ IMPORTING PACKAGE/MODELS ------------------ **/
 const User = require('../models/user');
 const Store = require('../models/storeInfo');
+const Product = require('../models/product');
 
 
 /** ------------------ EXPORTING FUNCTION To create a user ------------------ **/
@@ -35,6 +36,15 @@ module.exports.destroySession = async function(req, res, done) {
     });
     console.log("Logged out!");
     return res.redirect('/signIn');
+}
+/** ------------------ EXPORTING FUNCTION To go to store Info page ------------------ **/
+module.exports.storeInfo = async function (req, res) {
+    const storeInfo = await Store.find({userRef: req.user._id});
+
+    return res.render ('storeInfo', {
+        title: 'Store Info',
+        info: storeInfo
+    })
 }
 /** ------------------ EXPORTING FUNCTION To add storeInfo ------------------ **/
 module.exports.addStoreInfo = async function (req, res) {

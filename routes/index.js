@@ -14,7 +14,6 @@ router.get('/' , homeController.home );
 router.get('/signIn', homeController.signIn);
 router.get('/signUp', homeController.signUp);
 router.use('/users' , require('./user'));
-router.use('/products', require('./product'));
 
 /** ------------------ EXPORTING ROUTER ------------------ **/
 module.exports = router;

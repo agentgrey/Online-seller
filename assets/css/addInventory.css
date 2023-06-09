@@ -1,0 +1,43 @@
+.add-inventory {
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: 20%;
+}
+
+.add-inventory h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.inventory-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.inventory-form input,
+.inventory-form select {
+  width: 60%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.inventory-form select {
+  height: 40px;
+}
+
+.inventory-form button {
+  width: 10%;
+  background-color: #7DB5FF;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.inventory-form button:hover {
+  background-color: #4A8FD1;
+}
