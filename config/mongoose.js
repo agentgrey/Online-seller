@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 
 
 /** ------------------ MAKING CONNECTION ------------------ **/
-const DB = 'mongodb://127.0.0.1:27017/onlineSeller';
+// const DB = 'mongodb://127.0.0.1:27017/onlineSeller';
+const DB = "mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/online-seller?retryWrites=true&w=majority";
 
 mongoose.connect(DB).then(()=>{
     console.log('Connection successful!');

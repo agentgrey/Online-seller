@@ -11,6 +11,7 @@ const session = require("express-session");
 const passport = require('passport');
 const passportLocal = require('./config/passport_local');
 
+const MongoStore = require('connect-mongo');
 
 
 // middleware for body-parser
@@ -36,7 +37,16 @@ app.use(session({
     resave: false,
     cookie: {
         maxAge: (1000 * 60 * 1000)
-    }
+    },
+    store: MongoStore.create(
+        {
+            mongoUrl:'mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/online-seller?retryWrites=true&w=majority',
+            autoRemover : 'disabled'
+        },
+        function(err){
+            console.log("Error in the mongo-store");
+        }
+    ),
 }));
 
 // Using passport
